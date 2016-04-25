@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Simple Chat Automation Suite" parallel="tests">
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="userName" value="your username"/>
+    <parameter name="key" value="your ssh key"/>
+    <parameter name="os" value="mac"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="browserVersion" value="43"/>
+    <parameter name="url" value="https://simple-chat-asapp.herokuapp.com/"/>
+
+    <test name = "Simple Chat App">
+        <classes>
+            <class name="Client"/>
+        </classes>
+    </test>
+
+
+</suite>

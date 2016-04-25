@@ -1,0 +1,23 @@
+
+Follow-up questions
+-------------------
+
+Please give your answers to these questions. Think through them, but keep answers concise. Don't worry if you don't have all the answers off the top of your head. We’re also very much looking for your ability to reason about and work through these sorts of problems.
+
+- What are the bugs in this app? Within the constraints of the app (1-1 chat, not a chatroom, not an app that manages multiple chats or group chats like iMessage), what are key pieces of functionality that this app still needs?
+  Answer: User1 send a message to User2. if User2 is not online, User2 is unable to receive the User1 message. User2 should be able to receive that message when comes to online from offline. 
+  Color distinction of of messages sending and receiveing.
+
+- Suppose we decide to expand the functionality of the simple app to manage multiple chats at once. How would you recommend rolling out the change in a way that allows for thorough testing and minimizes disruption to users?
+  Answer: Implement small features and deliver instead of significant huge amount of changes at once. Of course lots of integration test wil be needed before the new release.
+
+- Older browsers do not support websockets. As such, the client needs to poll the server for new messages or events. The larger number of requests from these clients can potentially strain the system. How would you determine
+  what a reasonable number of requests are for the system? How would you determine whether adding polling to the client would exceed that threshold?
+  Answer: HTTP Streaming could be alternatives and pooling is required.In terms of polling, We can make some bench mark to the threshold by doing stress test.
+
+- Suppose that a large company has signed up to use the chat app a month from now. The system will suddenly need to support 1M conversations a day. How do you prepare?
+  Answer: First of all making sure all the functionality is working fine and then prepare load and stess tests for 1M+ conversations a day capacity.
+
+- In a small startup environment (~5 software engineers), how would you weigh the need to have high quality code against the need to move quickly? What practices would you implement to achieve the balance you think is right?
+  Answer: Lots of Unit test coverage, as many as edge cases is covered. Automte end to end testing and keep running on CI-CD pipeline.
+
